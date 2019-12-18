@@ -1,0 +1,7 @@
+domain: resourcepacks.crossplane.io
+repo: github.com/muvaf/minimal-aws
+resources:
+- group: aws
+  kind: MinimalAWS
+  version: v1alpha1
+version: "2"

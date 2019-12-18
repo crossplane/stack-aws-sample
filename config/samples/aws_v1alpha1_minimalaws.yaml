@@ -1,0 +1,7 @@
+apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
+kind: MinimalAWS
+metadata:
+  name: minimalaws-sample
+spec:
+  # Add fields here
+  foo: bar

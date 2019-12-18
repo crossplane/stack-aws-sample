@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "muvaf-minimal-aws"
+  labels:
+    core.crossplane.io/name: "muvaf-minimal-aws"
+spec:
+  selector:
+    matchLabels:
+      core.crossplane.io/name: "muvaf-minimal-aws"
+  replicas: 1
+  template:
+    metadata:
+      name: "muvaf-minimal-aws-controller"
+      labels:
+        core.crossplane.io/name: "muvaf-minimal-aws"
+    spec:
+      containers:
+      - name: "muvaf-minimal-aws-controller"
+        image: "muvaf/minimal-aws"
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
