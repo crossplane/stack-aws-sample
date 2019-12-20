@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: "muvaf-minimal-aws-controller"
-        image: "muvaf/minimal-aws"
+        image: "muvaf/minimal-aws:0.3"
         env:
         - name: POD_NAME
           valueFrom:

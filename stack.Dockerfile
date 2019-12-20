@@ -23,4 +23,5 @@ FROM alpine:3.7
 WORKDIR /
 COPY stack-package /
 COPY --from=builder /workspace/manager .
+COPY resources/ resources/
 ENTRYPOINT ["/manager"]

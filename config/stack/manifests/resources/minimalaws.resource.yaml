@@ -1,0 +1,10 @@
+id: minimalgcp
+title: Minimal AWS Environment
+titlePlural: Minimal AWS Environment
+category: Environment
+overviewShort: |
+  One click to install resource classes with minimal node requirements that are
+  connected to each other in the same network for all AWS resources.
+overview: |
+  You can use Minimal AWS to deploy a network and resource classes which allow
+  you to deploy resources in that network with minimal node configurations.
