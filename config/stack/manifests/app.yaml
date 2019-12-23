@@ -1,20 +1,36 @@
-title: ""
-readme: ""
-overview: ""
-overviewShort: ""
-version: 0.0.1
+title: "Minimal AWS Environment Stack"
+readme: |
+  An environment stack with built-in network and classes that let you provision
+  resources with minimal node requirements in AWS.
+overview: |
+  An environment stack with built-in network and classes that let you provision
+  resources with minimal node requirements in AWS.
+overviewShort: "Minimal environment stack for AWS."
+version: 0.3
 maintainers:
-- name: ""
-  email: ""
+- name: "Muvaffak Onus"
+  email: "monus@upbound.io"
 owners:
-- name: ""
-  email: ""
-company: ""
-category: ""
+- name: "Muvaffak Onus"
+  email: "monus@upbound.io"
+company: "Upbound"
+category: "Environment Stack"
 keywords:
- - "crossplane-cli"
-website: ""
-source: ""
+ - "easy"
+ - "aws"
+ - "minimal"
+ - "default"
+ - "private network"
+website: "upbound.io"
+source: "github.com/muvaf/minimal-aws"
 permissionScope: Cluster
+dependsOn:
+  - crd: '*.cache.aws.crossplane.io/v1beta1'
+  - crd: '*.compute.aws.crossplane.io/v1alpha3'
+  - crd: '*.database.aws.crossplane.io/v1beta1'
+  - crd: '*.database.aws.crossplane.io/v1alpha3'
+  - crd: '*.identity.aws.crossplane.io/v1alpha3'
+  - crd: '*.network.aws.crossplane.io/v1alpha3'
+  - crd: '*.aws.crossplane.io/v1alpha3'
 # License SPDX name: https://spdx.org/licenses/
 license: Apache-2.0

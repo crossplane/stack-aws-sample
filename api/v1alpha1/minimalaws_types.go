@@ -48,6 +48,7 @@ func (mg *MinimalAWS) SetConditions(c ...v1alpha1.Condition) {
 
 // +kubebuilder:object:root=true
 // +kubebuilder:resource:scope=Cluster
+// +kubebuilder:subresource:status
 
 // MinimalAWS is the Schema for the minimalaws API
 type MinimalAWS struct {

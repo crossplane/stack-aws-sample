@@ -1,0 +1,12 @@
+apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
+kind: MinimalAWS
+metadata:
+  name: test
+  annotations:
+    "resourcepacks.crossplane.io/keep-defaulting-annotations": "true"
+spec:
+  region: us-west-2
+  credentialsSecretRef:
+    name: aws-account-creds
+    namespace: crossplane-system
+    key: credentials

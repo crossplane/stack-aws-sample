@@ -11,6 +11,8 @@ spec:
     kind: MinimalAWS
     plural: minimalaws
   scope: Cluster
+  subresources:
+    status: {}
   validation:
     openAPIV3Schema:
       description: MinimalAWS is the Schema for the minimalaws API
