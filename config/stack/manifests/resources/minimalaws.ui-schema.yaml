@@ -1,47 +1,47 @@
 version: 0.3
 configSections:
-  - title: Minimal AWS Configuration
-    description: Enter the configuration parameters for your resource pack.
-    items:
-      - name: region
-        controlType: singleInput
-        type: string
-        path: .spec.region
-        title: Region
-        description: The region that the resources will be deployed to
-        default: us-west-2
-        validation:
-          - minLength: 2
-          - maxLength: 62
-      - name: credentialSecretName
-          controlType: singleInput
-          type: string
-          path: .spec.credentialsSecretRef.name
-          title: Credentials Secret Name
-          pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
-          description: The name of the secret that you stored your AWS credentials.
-          validation:
-            - minLength: 2
-            - maxLength: 62
-      - name: credentialSecretNamespace
-          controlType: singleInput
-          type: string
-          path: .spec.credentialsSecretRef.namespace
-          title: Credentials Secret Namespace
-          pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
-          description: The namespace of the secret that you stored your AWS credentials.
-          validation:
-            - minLength: 2
-            - maxLength: 62
-      - name: credentialSecretKey
-          controlType: singleInput
-          type: string
-          path: .spec.credentialsSecretRef.key
-          title: Credentials Secret Data Key
-          pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
-          description: The key that has the credential data in the secret.
-          validation:
-            - minLength: 2
-            - maxLength: 62
-resourceConditionPaths:
-  - .status.conditionedStatus.conditions[?(@.type=='Synced')]
+- title: Minimal AWS Configuration
+  description: Enter the configuration parameters for your resource pack.
+  items:
+  - name: region
+    controlType: singleInput
+    type: string
+    path: .spec.region
+    title: Region
+    description: The region that the resources will be deployed to
+    default: us-west-2
+    validation:
+    - minLength: 2
+    - maxLength: 62
+  - name: credentialSecretName
+    controlType: singleInput
+    type: string
+    path: .spec.credentialsSecretRef.name
+    title: Credentials Secret Name
+    pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
+    description: The name of the secret that you stored your AWS credentials.
+    validation:
+    - minLength: 2
+    - maxLength: 62
+  - name: credentialSecretNamespace
+    controlType: singleInput
+    type: string
+    path: .spec.credentialsSecretRef.namespace
+    title: Credentials Secret Namespace
+    pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
+    description: The namespace of the secret that you stored your AWS credentials.
+    validation:
+    - minLength: 2
+    - maxLength: 62
+  - name: credentialSecretKey
+    controlType: singleInput
+    type: string
+    path: .spec.credentialsSecretRef.key
+    title: Credentials Secret Data Key
+    pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
+    description: The key that has the credential data in the secret.
+    validation:
+    - minLength: 2
+    - maxLength: 62
+printerColumns:
+  Ready: .status.conditionedStatus.conditions[?(@.type=='Synced')]
