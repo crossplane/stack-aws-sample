@@ -2,5 +2,5 @@ spec:
   template:
     spec:
       containers:
-      - name: "muvaf-minimal-aws-controller"
-        image: "localhost:5000/muvaf/minimal-aws"
+      - name: "crossplaneio-minimal-aws-controller"
+        image: "localhost:5000/crossplane/stack-minimal-aws"

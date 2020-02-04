@@ -22,7 +22,7 @@ keywords:
  - "default"
  - "private network"
 website: "upbound.io"
-source: "github.com/muvaf/minimal-aws"
+source: "github.com/crossplaneio/stack-minimal-aws"
 permissionScope: Cluster
 dependsOn:
   - crd: '*.cache.aws.crossplane.io/v1beta1'

@@ -2,7 +2,7 @@
 apiVersion: stacks.crossplane.io/v1alpha1
 kind: ClusterStackInstall
 metadata:
-  name: "muvaf-minimal-aws"
+  name: "crossplaneio-minimal-aws"
 spec:
   source: localhost:5000
-  package: "muvaf/minimal-aws"
+  package: "crossplane/stack-minimal-aws"
