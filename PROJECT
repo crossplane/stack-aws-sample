@@ -1,5 +1,5 @@
 domain: resourcepacks.crossplane.io
-repo: github.com/muvaf/minimal-aws
+repo: github.com/crossplaneio/stack-minimal-aws
 resources:
 - group: aws
   kind: MinimalAWS

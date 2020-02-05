@@ -16,13 +16,16 @@ limitations under the License.
 package controllers
 
 import (
-	"github.com/go-logr/logr"
-	"github.com/muvaf/crossplane-resourcepacks/pkg/controllers"
-	"github.com/muvaf/minimal-aws/api/v1alpha1"
-	"k8s.io/apimachinery/pkg/runtime"
 	"reflect"
+
+	"github.com/go-logr/logr"
+	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
+
+	"github.com/crossplaneio/resourcepacks/pkg/controllers"
+
+	"github.com/crossplaneio/stack-minimal-aws/api/v1alpha1"
 )
 
 // MinimalAWSReconciler reconciles a MinimalAWS object

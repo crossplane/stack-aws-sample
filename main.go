@@ -19,8 +19,8 @@ import (
 	"flag"
 	"os"
 
-	awsv1alpha1 "github.com/muvaf/minimal-aws/api/v1alpha1"
-	"github.com/muvaf/minimal-aws/controllers"
+	awsv1alpha1 "github.com/crossplaneio/stack-minimal-aws/api/v1alpha1"
+	"github.com/crossplaneio/stack-minimal-aws/controllers"
 	"k8s.io/apimachinery/pkg/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	ctrl "sigs.k8s.io/controller-runtime"

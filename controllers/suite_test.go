@@ -22,7 +22,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	awsv1alpha1 "github.com/muvaf/minimal-aws/api/v1alpha1"
+	awsv1alpha1 "github.com/crossplaneio/stack-minimal-aws/api/v1alpha1"
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
 	"sigs.k8s.io/controller-runtime/pkg/client"
