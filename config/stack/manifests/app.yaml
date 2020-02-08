@@ -6,7 +6,7 @@ overview: |
   An environment stack with built-in network and classes that let you provision
   resources with minimal node requirements in AWS.
 overviewShort: "Minimal environment stack for AWS."
-version: 0.3
+version: 0.0.1
 maintainers:
 - name: "Muvaffak Onus"
   email: "monus@upbound.io"
@@ -22,7 +22,7 @@ keywords:
  - "default"
  - "private network"
 website: "upbound.io"
-source: "github.com/crossplaneio/stack-minimal-aws"
+source: "https://github.com/crossplaneio/stack-minimal-aws"
 permissionScope: Cluster
 dependsOn:
   - crd: '*.cache.aws.crossplane.io/v1beta1'
