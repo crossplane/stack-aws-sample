@@ -1,0 +1,16 @@
+resources:
+  - cache
+  - compute
+  - database
+  - identity
+  - network
+  - provider.yaml
+
+vars:
+  - name: REGION
+    objref:
+      kind: Provider
+      apiVersion: aws.crossplane.io/v1alpha3
+      name: aws-provider
+    fieldref:
+      fieldpath: spec.region
