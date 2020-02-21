@@ -1,4 +1,4 @@
-version: 0.3
+version: v0.2.0
 configSections:
 - title: Minimal AWS Configuration
   description: Enter the configuration parameters for your resource pack.
