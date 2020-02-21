@@ -1,9 +1,9 @@
-apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
-kind: MinimalAWS
+apiVersion: aws.crossplane.io/v1alpha3
+kind: Provider
 metadata:
-  name: test
+  name: aws-provider
 spec:
-  region: us-west-2
+  region: us-central-1
   credentialsSecretRef:
     name: aws-account-creds
     namespace: crossplane-system

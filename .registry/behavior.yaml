@@ -1,0 +1,18 @@
+source:
+  image: crossplane/stack-minimal-aws:v0.2.0
+  path: "kustomize"
+crd:
+  kind: MinimalAWS
+  apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
+engine:
+  type: kustomize
+  kustomize:
+    overlays:
+      - apiVersion: aws.crossplane.io/v1alpha3
+        kind: Provider
+        name: aws-provider
+        bindings:
+          - from: "spec.credentialsSecretRef"
+            to: "spec.credentialsSecretRef"
+          - from: "spec.region"
+            to: "spec.region"
