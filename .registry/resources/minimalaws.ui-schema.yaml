@@ -1,47 +1,58 @@
-version: v0.2.0
+version: v0.2.1
 configSections:
-- title: Minimal AWS Configuration
-  description: Enter the configuration parameters for your resource pack.
+- title: Provider Details
+  description: Provide the following details using an existing AWS account.
   items:
-  - name: region
-    controlType: singleInput
-    type: string
-    path: .spec.region
-    title: Region
-    description: The region that the resources will be deployed to
-    default: us-west-2
-    validation:
-    - minLength: 2
-    - maxLength: 62
-  - name: credentialSecretName
-    controlType: singleInput
-    type: string
-    path: .spec.credentialsSecretRef.name
-    title: Credentials Secret Name
-    pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
-    description: The name of the secret that you stored your AWS credentials.
-    validation:
-    - minLength: 2
-    - maxLength: 62
-  - name: credentialSecretNamespace
-    controlType: singleInput
-    type: string
-    path: .spec.credentialsSecretRef.namespace
-    title: Credentials Secret Namespace
-    pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
-    description: The namespace of the secret that you stored your AWS credentials.
-    validation:
-    - minLength: 2
-    - maxLength: 62
-  - name: credentialSecretKey
-    controlType: singleInput
-    type: string
-    path: .spec.credentialsSecretRef.key
-    title: Credentials Secret Data Key
-    pattern: ^([A-Za-z0-9](?:(?:[-A-Za-z0-9]){0,61}[A-Za-z0-9])?){2,62}$
-    description: The key that has the credential data in the secret.
-    validation:
-    - minLength: 2
-    - maxLength: 62
-printerColumns:
-  Ready: .status.conditionedStatus.conditions[?(@.type=='Synced')]
+    - name: region
+      controlType: singleSelect
+      path: .spec.region
+      title: Region
+      description: Region of the resources that will be deployed.
+      enum:
+        - 'ap-east-1'
+        - 'ap-northeast-1'
+        - 'ap-northeast-2'
+        - 'ap-northeast-3'
+        - 'ap-south-1'
+        - 'ap-southeast-1'
+        - 'ap-southeast-2'
+        - 'ca-central-1'
+        - 'cn-north-1'
+        - 'cn-northwest-1'
+        - 'eu-central-1'
+        - 'eu-north-1'
+        - 'eu-west-1'
+        - 'eu-west-2'
+        - 'eu-west-3'
+        - 'me-south-1'
+        - 'sa-east-1'
+        - 'us-east-1'
+        - 'us-east-2'
+        - 'us-gov-east-1'
+        - 'us-gov-west-1'
+        - 'us-west-1'
+        - 'us-west-2'
+      validation:
+        - required: true
+- title: Generate Provider Secret
+  description: You can use the following command to generate an AWS Provider secret that contains your default profile credentials. If you'd like to use a different account profile, you can specify it by changing the value of AWS_PROFILE environment variable in the beginning of the command.
+  items:
+    - name: additionalInfoSnippet
+      controlType: codeSnippet
+      codeText: AWS_PROFILE=default && echo -e "[default]\naws_access_key_id = $(aws configure get aws_access_key_id --profile $AWS_PROFILE)\naws_secret_access_key = $(aws configure get aws_secret_access_key --profile $AWS_PROFILE)"
+- title: Enter Your Generated Provider Secret
+  description: Once you have successfully generated the provider secret using the command above you can now enter it below.
+  items:
+    - name: providerSecret
+      controlType: secretInput
+      path:
+      title: Provider Secret
+      rows: 4
+      secret:
+        namePath: .spec.credentialsSecretRef.name
+        namespacePath: .spec.credentialsSecretRef.namespace
+        keyPath: .spec.credentialsSecretRef.key
+        keyValue: credentialsKeyBody
+      validation:
+        - required: true
+initialConfig: true
