@@ -15,6 +15,7 @@ owners:
   email: "monus@upbound.io"
 company: "Upbound"
 category: "Environment Stack"
+packageType: "Stack"
 keywords:
  - "easy"
  - "aws"
