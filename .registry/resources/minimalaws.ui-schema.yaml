@@ -1,58 +1,58 @@
 version: v0.2.1
+initialConfig: true
 configSections:
 - title: Provider Details
   description: Provide the following details using an existing AWS account.
   items:
-    - name: region
-      controlType: singleSelect
-      path: .spec.region
-      title: Region
-      description: Region of the resources that will be deployed.
-      enum:
-        - 'ap-east-1'
-        - 'ap-northeast-1'
-        - 'ap-northeast-2'
-        - 'ap-northeast-3'
-        - 'ap-south-1'
-        - 'ap-southeast-1'
-        - 'ap-southeast-2'
-        - 'ca-central-1'
-        - 'cn-north-1'
-        - 'cn-northwest-1'
-        - 'eu-central-1'
-        - 'eu-north-1'
-        - 'eu-west-1'
-        - 'eu-west-2'
-        - 'eu-west-3'
-        - 'me-south-1'
-        - 'sa-east-1'
-        - 'us-east-1'
-        - 'us-east-2'
-        - 'us-gov-east-1'
-        - 'us-gov-west-1'
-        - 'us-west-1'
-        - 'us-west-2'
-      validation:
-        - required: true
+  - name: region
+    controlType: singleSelect
+    path: .spec.region
+    title: Region
+    description: Region of the resources that will be deployed.
+    enum:
+    - 'ap-east-1'
+    - 'ap-northeast-1'
+    - 'ap-northeast-2'
+    - 'ap-northeast-3'
+    - 'ap-south-1'
+    - 'ap-southeast-1'
+    - 'ap-southeast-2'
+    - 'ca-central-1'
+    - 'cn-north-1'
+    - 'cn-northwest-1'
+    - 'eu-central-1'
+    - 'eu-north-1'
+    - 'eu-west-1'
+    - 'eu-west-2'
+    - 'eu-west-3'
+    - 'me-south-1'
+    - 'sa-east-1'
+    - 'us-east-1'
+    - 'us-east-2'
+    - 'us-gov-east-1'
+    - 'us-gov-west-1'
+    - 'us-west-1'
+    - 'us-west-2'
+    validation:
+      - required: true
 - title: Generate Provider Secret
   description: You can use the following command to generate an AWS Provider secret that contains your default profile credentials. If you'd like to use a different account profile, you can specify it by changing the value of AWS_PROFILE environment variable in the beginning of the command.
   items:
-    - name: additionalInfoSnippet
-      controlType: codeSnippet
-      codeText: AWS_PROFILE=default && echo -e "[default]\naws_access_key_id = $(aws configure get aws_access_key_id --profile $AWS_PROFILE)\naws_secret_access_key = $(aws configure get aws_secret_access_key --profile $AWS_PROFILE)"
+  - name: additionalInfoSnippet
+    controlType: codeSnippet
+    codeText: AWS_PROFILE=default && echo -e "[default]\naws_access_key_id = $(aws configure get aws_access_key_id --profile $AWS_PROFILE)\naws_secret_access_key = $(aws configure get aws_secret_access_key --profile $AWS_PROFILE)"
 - title: Enter Your Generated Provider Secret
   description: Once you have successfully generated the provider secret using the command above you can now enter it below.
   items:
-    - name: providerSecret
-      controlType: secretInput
-      path:
-      title: Provider Secret
-      rows: 4
-      secret:
-        namePath: .spec.credentialsSecretRef.name
-        namespacePath: .spec.credentialsSecretRef.namespace
-        keyPath: .spec.credentialsSecretRef.key
-        keyValue: credentialsKeyBody
-      validation:
-        - required: true
-initialConfig: true
+  - name: providerSecret
+    controlType: secretInput
+    path:
+    title: Provider Secret
+    rows: 4
+    secret:
+      namePath: .spec.credentialsSecretRef.name
+      namespacePath: .spec.credentialsSecretRef.namespace
+      keyPath: .spec.credentialsSecretRef.key
+      keyValue: credentialsKeyBody
+    validation:
+    - required: true

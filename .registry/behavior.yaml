@@ -5,6 +5,7 @@ crd:
   kind: MinimalAWS
   apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
 engine:
+  controllerImage: crossplane/templating-controller:v0.2.1
   type: kustomize
   kustomize:
     overlays:
