@@ -7,7 +7,7 @@ spec:
   cidrBlock: 192.168.64.0/18
   vpcIdRef:
     name: vpc
-  availabilityZone: us-west-2a
+  availabilityZone: $(REGION)a
   reclaimPolicy: Delete
   providerRef:
     name: aws-provider
@@ -20,7 +20,7 @@ spec:
   cidrBlock: 192.168.128.0/18
   vpcIdRef:
     name: vpc
-  availabilityZone: us-west-2b
+  availabilityZone: $(REGION)b
   reclaimPolicy: Delete
   providerRef:
     name: aws-provider
@@ -33,7 +33,7 @@ spec:
   cidrBlock: 192.168.192.0/18
   vpcIdRef:
     name: vpc
-  availabilityZone: us-west-2c
+  availabilityZone: $(REGION)b
   reclaimPolicy: Delete
   providerRef:
     name: aws-provider
