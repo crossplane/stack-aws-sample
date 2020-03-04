@@ -38,3 +38,8 @@ nameReference:
       - path: spec/groupName
         kind: SecurityGroup
 
+# varReference is the list of fields that we tell Kustomize to process for
+# variants.
+varReference:
+  - path: spec/availabilityZone
+    kind: Subnet
