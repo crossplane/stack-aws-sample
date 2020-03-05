@@ -6,7 +6,6 @@ overview: |
   An environment stack with built-in network and classes that let you provision
   resources with minimal node requirements in AWS.
 overviewShort: "Minimal environment stack for AWS."
-version: v0.2.1
 maintainers:
 - name: "Muvaffak Onus"
   email: "monus@upbound.io"
