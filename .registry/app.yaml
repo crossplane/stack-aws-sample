@@ -32,5 +32,6 @@ dependsOn:
   - crd: '*.identity.aws.crossplane.io/v1alpha3'
   - crd: '*.network.aws.crossplane.io/v1alpha3'
   - crd: '*.aws.crossplane.io/v1alpha3'
+  - package: 'crossplane/provider-aws'
 # License SPDX name: https://spdx.org/licenses/
 license: Apache-2.0
