@@ -1,5 +1,4 @@
 source:
-  image: crossplane/stack-minimal-aws:v0.2.1
   path: "kustomize"
 crd:
   kind: MinimalAWS
