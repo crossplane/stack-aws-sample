@@ -11,7 +11,5 @@ nameReference:
         kind: IAMRolePolicyAttachment
   - kind: IAMRole
     fieldSpecs:
-      - path: spec/roleName
-        kind: IAMRole
-      - path: spec/roleNameRef
+      - path: spec/forProvider/roleNameRef
         kind: IAMRolePolicyAttachment
