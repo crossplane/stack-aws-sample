@@ -1,8 +1,8 @@
 source:
   path: "kustomize"
 crd:
-  kind: MinimalAWS
-  apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
+  kind: AWSSample
+  apiVersion: aws.stacks.crossplane.io/v1alpha1
 engine:
   controllerImage: crossplane/templating-controller:v0.3.0-rc
   type: kustomize
