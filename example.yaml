@@ -1,5 +1,5 @@
 apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
-kind: MinimalAWS
+kind: AWSSample
 metadata:
   name: test
 spec:

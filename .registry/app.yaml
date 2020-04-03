@@ -1,11 +1,11 @@
-title: "Minimal AWS Environment Stack"
+title: "Stack AWS Sample"
 readme: |
-  An environment stack with built-in network and classes that let you provision
+  A sample stack with built-in network and classes that let you provision
   resources with minimal node requirements in AWS.
 overview: |
-  An environment stack with built-in network and classes that let you provision
+  A sample stack with built-in network and classes that let you provision
   resources with minimal node requirements in AWS.
-overviewShort: "Minimal environment stack for AWS."
+overviewShort: "Sample stack for AWS."
 maintainers:
 - name: "Muvaffak Onus"
   email: "monus@upbound.io"
@@ -13,16 +13,16 @@ owners:
 - name: "Muvaffak Onus"
   email: "monus@upbound.io"
 company: "Upbound"
-category: "Environment Stack"
+category: "Sample Stack"
 packageType: "Stack"
 keywords:
  - "easy"
  - "aws"
- - "minimal"
+ - "sample"
  - "default"
  - "private network"
 website: "upbound.io"
-source: "https://github.com/crossplaneio/stack-minimal-aws"
+source: "https://github.com/crossplaneio/stack-aws-sample"
 permissionScope: Cluster
 dependsOn:
   - crd: '*.cache.aws.crossplane.io/v1beta1'
