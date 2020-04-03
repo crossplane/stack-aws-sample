@@ -48,7 +48,7 @@ and the following resource classes with minimal hardware requirements that will 
 
 
 ```yaml
-apiVersion: aws.resourcepacks.crossplane.io/v1alpha1
+apiVersion: aws.stacks.crossplane.io/v1alpha1
 kind: AWSSample
 metadata:
   name: test
