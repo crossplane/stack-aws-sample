@@ -6,7 +6,7 @@ You can use this stack to spin up a private network as well as resource classes 
 
 Requirements:
 * Crossplane should be installed.
-* [AWS Provider](https://github.com/crossplaneio/provider-aws) should be installed and its version should be at least 0.5.0
+* [AWS Provider](https://github.com/crossplaneio/provider-aws) should be installed and its version should be at least 0.7.1
 
 If you have crossplane-cli installed, you can use the following command to install:
 
@@ -54,7 +54,6 @@ metadata:
   name: test
 spec:
   region: us-west-2
-  projectID: crossplane-playground
   credentialsSecretRef:
     name: aws-account-creds
     namespace: crossplane-system
