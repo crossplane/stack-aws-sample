@@ -1,4 +1,4 @@
-STACK_VERSION ?= v0.2.1
+STACK_VERSION ?= local
 STACK_IMG ?= crossplane/stack-aws-sample:$(STACK_VERSION)
 
 build:

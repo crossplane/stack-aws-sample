@@ -1,11 +1,11 @@
 id: awssample
-title: Stack AWS Sample
-titlePlural: Stack AWS Sample
+title: AWS Sample Stack
+titlePlural: AWS Sample Stacks
 category: Stack
 overviewShort: |
   One click to install resource classes with minimal node requirements that are
   connected to each other in the same network for all AWS resources.
 overview: |
-  You can use Stack AWS Sample to deploy a network and resource classes which
+  You can use AWS Sample Stack to deploy a network and resource classes which
   allow you to deploy resources in that network with minimal node
   configurations.
