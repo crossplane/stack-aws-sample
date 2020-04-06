@@ -1,4 +1,4 @@
-title: "Stack AWS Sample"
+title: "AWS Sample Stack"
 readme: |
   A sample stack with built-in network and classes that let you provision
   resources with minimal node requirements in AWS.
