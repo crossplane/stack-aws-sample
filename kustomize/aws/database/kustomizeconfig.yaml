@@ -13,8 +13,6 @@ nameReference:
         kind: RDSInstanceClass
   - kind: DBSubnetGroup
     fieldSpecs:
-      - path: spec/groupName
-        kind: DBSubnetGroup
       - path: specTemplate/forProvider/dbSubnetGroupNameRef/name
         kind: RDSInstanceClass
   - kind: Provider
@@ -23,5 +21,5 @@ nameReference:
         kind: DBSubnetGroup
   - kind: Subnet
     fieldSpecs:
-      - path: spec/subnetIdRefs/name
+      - path: spec/forProvider/subnetIdRefs/name
         kind: DBSubnetGroup
