@@ -12,7 +12,7 @@ maintainers:
 owners:
 - name: "Muvaffak Onus"
   email: "monus@upbound.io"
-company: "Upbound"
+company: "Crossplane"
 category: "Sample Stack"
 packageType: "Stack"
 keywords:
@@ -21,7 +21,7 @@ keywords:
  - "sample"
  - "default"
  - "private network"
-website: "upbound.io"
+website: "https://crossplane.io"
 source: "https://github.com/crossplaneio/stack-aws-sample"
 permissionScope: Cluster
 dependsOn:
