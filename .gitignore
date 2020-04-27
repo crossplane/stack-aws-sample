@@ -23,9 +23,9 @@ bin
 *.swo
 *~
 
-# stack-package is a generated folder, and can be considered an intermediate
+# package is a generated folder, and can be considered an intermediate
 # build artifact. We don't need to check it into version control.
-stack-package/
+package/
 
 /vendor
 /.vendor-new

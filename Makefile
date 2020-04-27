@@ -1,10 +1,10 @@
-STACK_VERSION ?= local
-STACK_IMG ?= crossplane/stack-aws-sample:$(STACK_VERSION)
+PACKAGE_VERSION ?= local
+PACKAGE_IMG ?= crossplane/stack-aws-sample:$(PACKAGE_VERSION)
 
 build:
-	docker build . -t ${STACK_IMG}
+	docker build . -t ${PACKAGE_IMG}
 .PHONY: build
 
 publish:
-	docker push ${STACK_IMG}
+	docker push ${PACKAGE_IMG}
 .PHONY: publish
