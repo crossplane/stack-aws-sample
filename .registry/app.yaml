@@ -1,11 +1,29 @@
 title: "AWS Sample Stack"
-readme: |
-  A sample stack with built-in network and classes that let you provision
-  resources with minimal node requirements in AWS.
+overviewShort: |
+  Configures an AWS environment with basic networking, security, and 
+  default resource classes for applications to use.
 overview: |
-  A sample stack with built-in network and classes that let you provision
-  resources with minimal node requirements in AWS.
-overviewShort: "Sample stack for AWS."
+  Configures an AWS environment with basic networking, security,
+  and default resource classes that provide a self-service catalog for
+  applications to use.
+readme: |
+  The `AWS Sample Stack` configures the neccesary cloud resources and
+  self-service catalog to deploy basic applications like `Wordpress`.
+
+  The managed resources configured by this stack include: `VPC`, `Subnet`,
+  `SecurityGroup`, `InternetGateway` `RouteTable`, `IAMRole`, and
+  `IAMPolicyAttachment`.
+
+  This stack offers the following resource classes for applications to
+  use: `EKSClusterClass`, `RDSInstanceClass`, and a `ReplicationGroupClass`
+  for Redis caches.
+
+  The `AWS Sample Stack` also configures a `Provider` connection resource,
+  so the `AWS Provider` can communicate with AWS API.
+
+  [Learn More on GitHub](https://github.com/crossplane/stack-aws-sample)
+  to see the complete `kustomize` templates used in this stack and as a
+  starting point for building your own stack.
 maintainers:
 - name: "Muvaffak Onus"
   email: "monus@upbound.io"
