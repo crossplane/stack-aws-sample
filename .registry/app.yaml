@@ -40,7 +40,7 @@ keywords:
  - "default"
  - "private network"
 website: "https://crossplane.io"
-source: "https://github.com/crossplaneio/stack-aws-sample"
+source: "https://github.com/crossplane/stack-aws-sample"
 permissionScope: Cluster
 dependsOn:
   - crd: '*.cache.aws.crossplane.io/v1beta1'
