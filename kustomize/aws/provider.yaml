@@ -2,6 +2,8 @@ apiVersion: aws.crossplane.io/v1alpha3
 kind: Provider
 metadata:
   name: aws-provider
+  annotations:
+    templatestacks.crossplane.io/deletion-priority: "-1"
 spec:
   region: us-central-1
   credentialsSecretRef:
