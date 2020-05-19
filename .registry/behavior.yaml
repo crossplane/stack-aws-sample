@@ -4,7 +4,7 @@ crd:
   kind: AWSSample
   apiVersion: aws.stacks.crossplane.io/v1alpha1
 engine:
-  controllerImage: crossplane/templating-controller:v0.3.0-11.g0f19a4b
+  controllerImage: crossplane/templating-controller:v0.4.0
   type: kustomize
   kustomize:
     overlays:
