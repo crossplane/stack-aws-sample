@@ -83,11 +83,11 @@ docker save "crossplane/stack-aws-sample:<version>" | (eval "$(minikube docker-e
 
 After running this, you can use the [installation](#installation) command and the image loaded into minikube node will be picked up. 
 
-[vpc]: kustomize/aws/network/vpc.yaml
-[subnet]: kustomize/aws/network/subnet.yaml
-[securitygroup]: kustomize/aws/network/securitygroup.yaml
-[routetable]: kustomize/aws/network/routetable.yaml
-[internetgateway]: kustomize/aws/network/internetgateway.yaml
+[vpc]: kustomize/aws/ec2/vpc.yaml
+[subnet]: kustomize/aws/ec2/subnet.yaml
+[securitygroup]: kustomize/aws/ec2/securitygroup.yaml
+[routetable]: kustomize/aws/ec2/routetable.yaml
+[internetgateway]: kustomize/aws/ec2/internetgateway.yaml
 [iamrole]: kustomize/aws/identity/iamrole.yaml
 [iamrolepolicyattachment]: kustomize/aws/identity/iamrolepolicyattachment.yaml
 [dbsubnetgroup]: kustomize/aws/database/dbsubnetgroup.yaml

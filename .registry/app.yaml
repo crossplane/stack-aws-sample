@@ -48,7 +48,7 @@ dependsOn:
   - crd: '*.database.aws.crossplane.io/v1beta1'
   - crd: '*.database.aws.crossplane.io/v1alpha3'
   - crd: '*.identity.aws.crossplane.io/v1alpha3'
-  - crd: '*.network.aws.crossplane.io/v1alpha3'
+  - crd: '*.ec2.aws.crossplane.io/v1beta1'
   - crd: '*.aws.crossplane.io/v1alpha3'
   - package: 'crossplane/provider-aws'
 # License SPDX name: https://spdx.org/licenses/

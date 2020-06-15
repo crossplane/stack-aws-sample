@@ -1,6 +1,6 @@
 # should we add security groups for replication group as well?
 ---
-apiVersion: network.aws.crossplane.io/v1beta1
+apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: SecurityGroup
 metadata:
   name: eks-security-group
@@ -14,7 +14,7 @@ spec:
   providerRef:
     name: aws-provider
 ---
-apiVersion: network.aws.crossplane.io/v1beta1
+apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: SecurityGroup
 metadata:
   name: rds-security-group
