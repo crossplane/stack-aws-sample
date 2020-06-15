@@ -17,29 +17,29 @@ nameReference:
         kind: VPC
   - kind: VPC
     fieldSpecs:
-      - path: spec/vpcIdRef/name
+      - path: spec/forProvider/vpcIdRef/name
         kind: InternetGateway
-      - path: spec/vpcIdRef/name
+      - path: spec/forProvider/vpcIdRef/name
         kind: RouteTable
-      - path: spec/vpcIdRef/name
+      - path: spec/forProvider/vpcIdRef/name
         kind: SecurityGroup
-      - path: spec/vpcIdRef/name
+      - path: spec/forProvider/vpcIdRef/name
         kind: Subnet
   - kind: InternetGateway
     fieldSpecs:
-      - path: spec/routes/gatewayIdRef/name
+      - path: spec/forProvider/routes/gatewayIdRef/name
         kind: RouteTable
   - kind: Subnet
     fieldSpecs:
-      - path: spec/associations/subnetIdRef/name
+      - path: spec/forProvider/associations/subnetIdRef/name
         kind: RouteTable
   - kind: SecurityGroup
     fieldSpecs:
-      - path: spec/groupName
+      - path: spec/forProvider/groupName
         kind: SecurityGroup
 
 # varReference is the list of fields that we tell Kustomize to process for
 # variants.
 varReference:
-  - path: spec/availabilityZone
+  - path: spec/forProvider/availabilityZone
     kind: Subnet

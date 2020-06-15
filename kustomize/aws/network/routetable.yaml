@@ -1,22 +1,23 @@
 ---
-apiVersion: network.aws.crossplane.io/v1alpha3
+apiVersion: network.aws.crossplane.io/v1beta1
 kind: RouteTable
 metadata:
   name: routetable
 spec:
-  vpcIdRef:
-    name: vpc
-  routes:
-    - destinationCidrBlock: 0.0.0.0/0
-      gatewayIdRef:
-        name: internetgateway
-  associations:
-    - subnetIdRef:
-        name: subnet-a
-    - subnetIdRef:
-        name: subnet-b
-    - subnetIdRef:
-        name: subnet-c
+  forProvider:
+    vpcIdRef:
+      name: vpc
+    routes:
+      - destinationCidrBlock: 0.0.0.0/0
+        gatewayIdRef:
+          name: internetgateway
+    associations:
+      - subnetIdRef:
+          name: subnet-a
+      - subnetIdRef:
+          name: subnet-b
+      - subnetIdRef:
+          name: subnet-c
   reclaimPolicy: Delete
   providerRef:
     name: aws-provider
