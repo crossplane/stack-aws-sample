@@ -3,7 +3,7 @@ resources:
   - compute
   - database
   - identity
-  - network
+  - ec2
   - provider.yaml
 
 vars:
